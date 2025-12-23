@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://qqua285ohyhi"]
+[gd_scene load_steps=3 format=3 uid="uid://qqua285ohyhi"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://b5fttl472i8cs" path="res://Images/Bus-removebg-preview (1).png" id="1_aidsh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilm87"]
+size = Vector2(73, 42)
+
+[node name="Bus" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(145.58414, 462.87497)
+scale = Vector2(0.12406472, 0.12406472)
+texture = ExtResource("1_aidsh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(145.58414, 460.87494)
+shape = SubResource("RectangleShape2D_ilm87")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(141, 462)
